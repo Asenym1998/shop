@@ -3,19 +3,61 @@ body {
   margin: 20px;
   background: #fefefe;
 }
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
 .products {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+
 .product {
   border: 1px solid #ccc;
   padding: 10px;
-  width: 200px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
 }
+
 button {
   background: #ff4081;
   color: white;
   border: none;
-  padding: 8px;
+  padding: 8px 12px;
   cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e73370;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .product img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 5px;
+  }
 }
